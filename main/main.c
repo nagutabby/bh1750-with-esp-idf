@@ -54,7 +54,7 @@ int app_main() {
         }
         raw_lux = ((uint16_t)data_rd[0] << 8 | data_rd[1]);
         lux = raw_lux / 1.2;
-        ESP_LOGI(TAG, "Lux: %.1f", lux);
+        ESP_LOGI(TAG, "Illuminance: %.1f lx", lux);
         vTaskDelay(500 / portTICK_PERIOD_MS);
     }
     return 0;
